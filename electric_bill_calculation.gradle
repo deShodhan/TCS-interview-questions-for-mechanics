@@ -1,0 +1,21 @@
+#An electric power department calculates electric bill. If the consumed
+#units are less than 100, thry charge 5rupees per unit and rupees 7 will be charged for
+#every unit after 100. Now accept no of units and calculate the electric bill
+
+class power:
+  def __init__(self):
+    self.x=int(input('enter values: '))
+  def getusage(self):
+      if self.x<100:
+        print(5*self.x)
+      if self.x>100:
+        n=self.x-100
+        m=self.x-n
+        n=n*7
+        m=m*5
+        print(n,m)
+        tot=(n+m)
+        print(tot)  
+if __name__=='__main__':
+  p=power()    
+  p.getusage()   

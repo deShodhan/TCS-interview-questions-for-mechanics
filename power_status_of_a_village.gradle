@@ -1,0 +1,27 @@
+# There are N no.of houses in a village. Each house requires a voltage of V volts of
+# power for their appliances. 
+# The houses are arranged in the form of a matrix(r*c) where N is the order of the 
+# matrix. The amount of voltage supplied to each house is calculated as current*resistance.
+# where i is row no and r is column no. When the voltage supplied to the houses(i*r)
+# matches the value V, the appliances in the house work. The task here is to find
+# the no.of houses whose voltage matches with V. If none of the value matche with V,
+# display NO POWER. 
+
+class Power:
+  def __init__(self):
+    self.houses=0
+    self.n=int(input('Enter no of houses:'))
+    self.v=int(input('Enter voltage:'))
+  def houses_with_given_voltage(self):
+    for i in range(1,self.n+1):        #should be n+1 because for loop conts only upto n-1.
+      for j in range(1,self.n+1):
+        if(i*j==self.v):
+          self.houses=self.houses+1
+  def _print(self):
+    if self.houses==0:
+      print('NO POWER')
+    print('total no of houses with voltage',self.v,'is',self.houses)     
+if __name__=='__main__':
+  p=Power()    
+  p.houses_with_given_voltage()
+  p._print()          

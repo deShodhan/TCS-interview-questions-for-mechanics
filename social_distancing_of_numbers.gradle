@@ -1,0 +1,19 @@
+# Social distancing of numbers can be denoted as the difference of two numbers adjacent to it
+# Accept a number and calculate the social distancing of the numbers.
+# ex: if the input is 123456789, the output should be 11111111.
+
+class Dist:
+  def __init__(self):
+    n=str(input('enter values: '))
+    self.res = [int(x) for x in str(n)]
+    print(self.res)
+  def getdist(self):
+    x=0
+    if len(self.res)==1:
+      print('the number should be more than 2 digits')
+    for i in range(len(self.res)-1):
+      x=self.res[i+1]-self.res[i]
+      print(x)
+if __name__=='__main__':
+  p=Dist()    
+  p.getdist()          
